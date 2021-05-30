@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package hello_server;
+
+option go_package = "mygithub/cat_grpc_demo/helloworld/helloworld";
+
+service HelloService {
+  rpc GetHello(HelloRequest) returns (HelloResponse){};
+}
+
+message HelloRequest {
+  int32 prod_id = 1;
+}
+
+message HelloResponse {
+  int32 prod_stock = 1;
+}

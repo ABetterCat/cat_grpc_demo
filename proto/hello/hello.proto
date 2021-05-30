@@ -1,0 +1,17 @@
+syntax = "proto3"; // 指定proto版本
+
+package hello;     // 指定默认包名
+
+option go_package = "mygithub/cat_grpc_demo/proto/hello";
+
+service HelloService {
+  rpc SayHello(HelloRequest) returns (HelloResponse) {}
+}
+
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloResponse {
+  string message = 1;
+}
